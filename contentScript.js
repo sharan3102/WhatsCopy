@@ -39,6 +39,7 @@ function addCopyIconToMessages(){
 
         // add button to icon container
         iconContainer.appendChild(copyButton);
+        console.log("------------BUTTON ADDED----------------");
         message.addEventListener('mouseover', () => {
             copyButton.style.display = 'block';
         });
@@ -90,6 +91,10 @@ function addCopyIconToMessages(){
 }
 
 function getNewMessages(){
+
+    console.log("Running Mutation Observer !!!");
+    console.log("Looking for New Messages -------------->");
+
     const newMessage = document.querySelector('.n5hs2j7m.oq31bsqd.gx1rr48f.qh5tioqs');
 
     if(newMessage){
@@ -98,7 +103,7 @@ function getNewMessages(){
                 if( message.type === 'childList'){
                     message.addedNodes.forEach((renderedMessage) => {
                         if(renderedMessage.getAttribute('role') === 'row'){
-                            console.log(`New Message Element ${renderedMessage}`);
+                            // console.log(`New Message Element ${renderedMessage.textContent}`);
 
                             // somehow add copybutton logic
                         }
@@ -119,3 +124,11 @@ function getNewMessages(){
     }
     
 }
+
+const chatListDiv = document.querySelector('div[aria-label="Chat list"]');
+
+chatListDiv.addEventListener('click', () => {
+    console.log("Moved to a new Chat !!!!");
+    getNewMessages();
+    addCopyIconToMessages();
+});
