@@ -88,3 +88,34 @@ function addCopyIconToMessages(){
     });
 
 }
+
+function getNewMessages(){
+    const newMessage = document.querySelector('.n5hs2j7m.oq31bsqd.gx1rr48f.qh5tioqs');
+
+    if(newMessage){
+        const observer = new MutationObserver((messageList, observer) => {
+            messageList.forEach((message) => {
+                if( message.type === 'childList'){
+                    message.addedNodes.forEach((renderedMessage) => {
+                        if(renderedMessage.getAttribute('role') === 'row'){
+                            console.log(`New Message Element ${renderedMessage}`);
+
+                            // somehow add copybutton logic
+                        }
+                    });
+                }
+            });
+        });
+
+        const config = {
+            childList: true,
+            subtree: true
+        };
+
+        observer.observe(newMessage,config);
+    }
+    else{
+        console.log("Not found");
+    }
+    
+}
