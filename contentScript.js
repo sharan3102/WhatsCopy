@@ -116,6 +116,7 @@ function getNewMessages(){
                             // console.log(`New Message Element ${renderedMessage.textContent}`);
 
                             // somehow add copybutton logic
+                            addCopyIconToMessages();
                         }
                     });
                 }
