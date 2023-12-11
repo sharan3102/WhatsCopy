@@ -16,8 +16,8 @@ function copyToClipboard(text) {
 function addCopyIconToMessages(){
 
     // get messages
-    const messages = document.querySelectorAll('.message-in');
-    console.log(messages);
+    const messages = document.querySelectorAll('.message-in, .message-out');
+    // console.log(messages);
     
     messages.forEach(message => {
         
