@@ -18,13 +18,12 @@ function expandContent(messageElement) {
     const readMoreButton = messageElement.querySelector('.read-more-button');
     const contentSpan = messageElement.querySelector('._11JPr.selectable-text.copyable-text');
     if(readMoreButton){
-        readMoreButton.click();
-    
-        // Access expanded content after a slight delay
+        readMoreButton.click();    
         setTimeout(function() {
             const expandedContent = contentSpan.textContent; 
             console.log('Expanded content:', expandedContent);
-        }, 500);
+            return expandedContent;
+        }, 100);
     }
     else{
         return;
@@ -61,26 +60,22 @@ function addCopyIconToMessages(message){
         // add event listener to the copy button
         copyButton.addEventListener('click', () => {
 
-            // get message text
-            const copyableText = message.querySelector('.copyable-text span');
+            // get message element
+            const copyableText = message.querySelector('span.copyable-text > span');
             let messageText = ''
-            // copyableText ? copyableText.textContent.trim() : '';
-            if(copyableText){
-                
-                expandContent(message);
-                console.log(copyableText)
-                console.log(copyableText.children[0])
 
-                if(copyableText.children[0].tagName === 'IMG' ){
-                    console.log("Inside IFFFF ---------------->")
-                    messageText = copyableText.children[0].alt;
-                    console.log(messageText)
+            if(copyableText){
+
+                console.log(copyableText);
+                if(message.querySelector('.read-more-button')){
+                    messageText = expandContent(message);
+                    console.log(messageText);
                 }
                 else{
-                    console.log("Inside ELSE ---------------->")
                     messageText = copyableText.textContent.trim();
-                    console.log(messageText)
+                    console.log(messageText);
                 }
+
             }
 
             // copy the message text to clipboard
