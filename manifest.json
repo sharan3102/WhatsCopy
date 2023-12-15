@@ -1,9 +1,15 @@
 {
     "manifest_version": 3,
-    "name": "WhatsApp Copy Extension",
+    "name": "WhatsCopy",
     "version": "1.0",
-    "description": "Adds a copy icon to WhatsApp Web messages for easy copying.",
+    "description": "Copy WhatsApp messages with just a click ⚡️",
     "author" : "sharan3102@gmail.com",
+    "icons": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
     "action" : {
       "default_popup": "popup.html",
       "default_title": "WhatsCopy"
