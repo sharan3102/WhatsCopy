@@ -146,15 +146,19 @@ function getNewMessages(){
     
 }
 
-const chatListDiv = document.querySelector('div[aria-label="Chat list"]');
+document.body.addEventListener('click', (event) => {
+    var clickedElement = event.target;
 
-chatListDiv.addEventListener('click', () => {
-    console.log("Moved to a new Chat !!!!");
-    getNewMessages();
-    // get messages
-    const messages = document.querySelectorAll('.message-in, .message-out');
-    // console.log(messages);
-    messages.forEach((message) => {
-        addCopyIconToMessages(message);
-    });
+    while (clickedElement) {
+        if (clickedElement.matches('div[aria-label="Chat list"]')) {
+            console.log("Moved to a new Chat !!!!");
+            getNewMessages();
+            const messages = document.querySelectorAll('.message-in, .message-out');
+            messages.forEach((message) => {
+                addCopyIconToMessages(message);
+            });
+            return;
+        }
+        clickedElement = clickedElement.parentElement;
+    }
 });
