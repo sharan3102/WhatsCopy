@@ -99,12 +99,6 @@ Scan the QR code below to show your support:
 
 ![Buy Me a Coffee QR](https://github.com/sharan3102/chrome-extension/blob/main/images/bmc_qr.png?raw=true)
 
-![Buy Me a Coffee QR](https://github.com/sharan3102/chrome-extension/blob/main/images/bmc-button.png?raw=true)
-
-
-
-
-
 Thank you for using WhatsCopy! Your support is greatly appreciated.
 
 
