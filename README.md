@@ -15,7 +15,7 @@ WhatsCopy is a cross browser extension designed to simplify message copying with
 
 To use the Whatscopy, follow these steps:
 
-- Download the extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/whatscopy-copy-in-a-click/aiamgngfbogknhaolpplljhfjgkppkfn)
+- Download the extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/whatscopy-copy-in-a-click/aiamgngfbogknhaolpplljhfjgkppkfn)  [Firefox Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/whatscopy-copy-in-a-click/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 -  Enable the extension by clicking on the extension icon while using WhatsApp Web.
 -  Refresh WhatsApp once after installing the extension
 ## Screenshots 📸
